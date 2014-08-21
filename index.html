@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.3.min.css" />
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div data-role="page" id="home">
+
+            <div data-role="header">
+                <h1>Minhas anotações</h1>
+                <a href="#edit" id="add" data-icon="plus" class="ui-btn-right">Novo</a>
+            </div><!-- /header -->
+
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true" data-filter="true" id="noteList">
+                </ul>
+            </div>
+        </div><!-- /page home-->
+
+        <div data-role="page" id="details">
+            <div id="details_header" data-role="header">
+                <a href="#home" id="back" data-icon="back" data-direction="reverse">Voltar</a>
+                <h1></h1>
+                <a href="#edit" id="add" data-icon="minus" class="ui-btn-right">Editar</a>
+            </div>
+            <div id="note_content" data-role="content">
+                <label id="noteId" class="ui-hidden-accessible"></label>
+                <div class="ui-field-contain">
+                    <label for="textarea-1">Nota:</label>
+                    <textarea readonly="true" cols="40" rows="8" name="textarea-1" id="noteDesc"></textarea>
+                </div>
+            </div>
+        </div><!-- /page details-->
+
+        <div data-role="page" id="edit">
+            <div id="edit_header" data-role="header">
+                <a href="#home" id="back" data-icon="back" data-direction="reverse">Voltar</a>
+                <h1></h1>
+            </div>
+            <div id="edit_content" data-role="content">
+                <label id="noteId" class="ui-hidden-accessible"></label>
+                <div class="ui-field-contain">
+                    <label for="textinput-1">Titulo:</label>
+                    <input type="text" name="textinput-1" id="noteName">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="textarea-1">Nota:</label>
+                    <textarea cols="40" rows="8" name="textarea-1" id="noteDesc"></textarea>
+                </div>
+                <button class="ui-btn ui-corner-all" id="save">Salvar</button>
+            </div>
+        </div><!-- /page details-->
+
+        <!--script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="SQLitePlugin.js"></script-->
+        <script src="js/lib/jquery-1.11.1.min.js"></script>
+        <script src="js/lib/jquery.mobile-1.4.3.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
